@@ -11,7 +11,7 @@ function autoFillSearch() {
     var qsData = {'wd': strdomin, 'p': '3', 'cb': 'ShowDiv', 't': new Date().getMilliseconds().toString()};
     $.ajax({
         async: false,
-        url: "http://suggestion.baidu.com/su",
+        url: "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su",
         type: "GET",
         dataType: 'jsonp',
         jsonp: 'jsoncallback',
