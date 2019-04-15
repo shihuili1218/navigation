@@ -49,40 +49,50 @@
                 </div>
                 <div class="box" id="banner">
                 	<div style="display: flex; justify-content: center; align-items: center;">
-                		<img src="img/banner.png" width="450px" height="225px">
+                		<img src="img/banner.png" width="50%" height="auto">
                 	</div>
                 </div>
                 <!-- 搜索 -->
-                <div class="box">
+                <div class="box" style="overflow: visible;">
                     <a href="#" name="search"></a>
                     <div style="display: flex; justify-content: center;align-items: center; padding-top: 20px" >
-                    	<div>
-                    	<input id="searchText" type="text"  placeholder="泉龙提醒您：请输入搜索内容" oninput ="autoFillSearch()" onblur="searchTextOnblur()" style="border: 0px;width: 500px; height: 40px; background-color: #F3F6F8; padding-left: 5px; padding-right: 5px"/><button type="button" id="btnsearch" style="border: 0px; width: 70px; height: 40px; background-color: #5cb85c; " onclick="search_click()">PY一下</button>
+                    	<div style="display: flex;width: 100%; justify-content: center;">
+                    		<div style="width: 50%;position: relative;">
+                    			<input id="searchText" type="text"  placeholder="泉龙提醒您：请输入搜索内容" oninput ="autoFillSearch()" onblur="searchTextOnblur()" 
+                    			style="border: 0px;width: 100%; height: 40px; background-color: #F3F6F8; padding-left: 5px; padding-right: 5px; box-sizing: border-box;"/>
+                    			
+                				<div id="autoFillInput" style="width: 100%; position: absolute; z-index: 99999; background: #fff; overflow: auto;">
+	                    		
+	                    		</div>
+                    		</div>
+                			
+                			<button type="button" id="btnsearch" style="border: 0px; width: 70px; height: 40px; background-color: #5cb85c;" onclick="search_click()">PY一下</button>
                     	</div>
-                    </div>
-					<div style="width: 560px; margin: 0 auto;">
-                    	<div id="autoFillInput" style="display: none; width: 510px; position: absolute; z-index: 99999; background: #fff">
-                    		
-                    	</div>
-                	</div>
 
+                    </div>
+					
+
+                    <div style="display: flex; justify-content: center;align-items: center; padding-top: 10px" >
+                   		<div style="display: flex;width: 100%; justify-content: center;">
+                   			<div style="width: 50%;">
+                   				<input type="radio" value="baidu" id="radio" name="check" onchange="test(this)" checked="">
+	                    		<span>百度</span>&nbsp;&nbsp;&nbsp;
+			                    <input type="radio" value="google" id="radio" name="check" onchange="test(this)">
+			                    <span>谷歌</span>&nbsp;&nbsp;&nbsp;
+			                    <input type="radio" value="github" id="radio" name="check" onchange="test(this)">
+			                    <span>github</span>&nbsp;&nbsp;
+			                    <input type="radio" value="stackoverflow" id="radio" name="check" onchange="test(this)">
+			                    <span>stackoverflow</span>&nbsp;&nbsp;
+			                    <input type="radio" value="bing" id="radio" name="check" onchange="test(this)">
+			                    <span>必应</span>&nbsp;&nbsp;
+			                    <input type="radio" value="geek" id="radio" name="check" onchange="test(this)">
+			                    <span>极客</span>&nbsp;&nbsp;
+			                    <input type="radio" value="iconfont" id="radio" name="check" onchange="test(this)">
+			                    <span>iconfont</span>&nbsp;&nbsp;
+                   			</div>
+                   		</div>
+                    </div>
                    
-                    <div class="search-radio" style="width: 550px;margin: 0 auto; margin-top: 10px">
-	                    <input type="radio" value="baidu" id="radio" name="check" onchange="test(this)" checked="">
-	                    <span>百度</span>&nbsp;&nbsp;&nbsp;
-	                    <input type="radio" value="google" id="radio" name="check" onchange="test(this)">
-	                    <span>谷歌</span>&nbsp;&nbsp;&nbsp;
-	                    <input type="radio" value="github" id="radio" name="check" onchange="test(this)">
-	                    <span>github</span>&nbsp;&nbsp;
-	                    <input type="radio" value="stackoverflow" id="radio" name="check" onchange="test(this)">
-	                    <span>stackoverflow</span>&nbsp;&nbsp;
-	                    <input type="radio" value="bing" id="radio" name="check" onchange="test(this)">
-	                    <span>必应</span>&nbsp;&nbsp;
-	                    <input type="radio" value="geek" id="radio" name="check" onchange="test(this)">
-	                    <span>极客</span>&nbsp;&nbsp;
-	                    <input type="radio" value="iconfont" id="radio" name="check" onchange="test(this)">
-	                    <span>iconfont</span>&nbsp;&nbsp;
-            		</div>
 
                 </div>
                  <!-- 实用工具 -->
