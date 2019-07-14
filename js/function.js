@@ -91,12 +91,10 @@ function autoDisplay(autoStr) {
 
 }
 
-
-function search_click(){
+function search_click(engine){
     hideDiv($("#autoFillInput"));
 	 var v = document.getElementById("searchText").value;
     if (v != '') {
-        var engine = chooseSerarch()
 
         if (engine == '') {
             search("https://www.baidu.com/s?wd=" + v)
@@ -118,20 +116,6 @@ function search_click(){
             }
         }
     }
-}
-
-
-
-function chooseSerarch() {
-    var radios = document.getElementsByName("check");
-    for (radio in radios) {
-        if (radios[radio].checked) {
-            val = radios[radio].value;
-            return val
-            break;
-        }
-    }
-
 }
 
 
@@ -191,7 +175,7 @@ $(function () {
                 //文本框中的内容变成高亮节点的内容
                 $("#searchText").val(comText);
             } 
-            search_click();
+            search_click("baidu");
         } else if (keyCode == 27) {    //按下Esc 隐藏弹出层
             if ($("#autoFillInput").is(":visible")) {
                 $("#autoFillInput").hide();

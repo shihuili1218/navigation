@@ -61,14 +61,12 @@
                     	<div style="display: flex;width: 100%; justify-content: center;">
                     		<div style="width: 50%;position: relative;">
                     			<input id="searchText" type="text"  placeholder="泉龙提醒您：请输入搜索内容" oninput ="autoFillSearch()" onblur="searchTextOnblur()" 
-                    			style="border: 0px;width: 100%; height: 40px; background-color: #F3F6F8; padding-left: 5px; padding-right: 5px; box-sizing: border-box;"/>
+                    			style="border: 1px solid rgba(34,36,38,.15); outline: 0; border-radius: 30px; width: 100%; height: 40px; background-color: #F3F6F8; padding-left: 15px; padding-right: 15px; "/>
                     			
                 				<div id="autoFillInput" style="width: 100%; position: absolute; z-index: 99999; background: #fff; overflow: auto;">
 	                    		
 	                    		</div>
                     		</div>
-                			
-                			<button type="button" id="btnsearch" style="border: 0px; width: 70px; height: 40px; background-color: #5cb85c;" onclick="search_click()">PY一下</button>
                     	</div>
 
                     </div>
@@ -76,23 +74,14 @@
 
                     <div style="display: flex; justify-content: center;align-items: center; padding-top: 10px" >
                    		<div style="display: flex;width: 100%; justify-content: center;">
-                   			<div style="width: 50%;">
-                   				<input type="radio" value="baidu" id="radio" name="check" onchange="test(this)" checked="">
-	                    		<span>百度</span>&nbsp;&nbsp;&nbsp;
-			                    <input type="radio" value="google" id="radio" name="check" onchange="test(this)">
-			                    <span>谷歌</span>&nbsp;&nbsp;&nbsp;
-
-								<input type="radio" value="google-image" id="radio" name="check" onchange="test(this)">
-			                    <span>谷歌镜像</span>&nbsp;&nbsp;&nbsp;
-
-			                    <input type="radio" value="github" id="radio" name="check" onchange="test(this)">
-			                    <span>github</span>&nbsp;&nbsp;
-			                    <input type="radio" value="stackoverflow" id="radio" name="check" onchange="test(this)">
-			                    <span>stackoverflow</span>&nbsp;&nbsp;
-			                    <input type="radio" value="bing" id="radio" name="check" onchange="test(this)">
-			                    <span>必应</span>&nbsp;&nbsp;
-			                    <input type="radio" value="geek" id="radio" name="check" onchange="test(this)">
-			                    <span>极客</span>&nbsp;&nbsp;
+                   			<div style="justify-content: center;">
+                   				<input type="button" class="search_btn" value="百度" onclick="search_click('baidu')" />
+                   				<input type="button" class="search_btn" value="谷歌" onclick="search_click('google')" />
+                   				<input type="button" class="search_btn" value="谷歌镜像" onclick="search_click('google-image')" />
+                   				<input type="button" class="search_btn" value="stackoverflow" onclick="search_click('stackoverflow')" />
+                   				<input type="button" class="search_btn" value="github" onclick="search_click('github')" />
+                   				<input type="button" class="search_btn" value="必应" onclick="search_click('bing')" />
+                   				<input type="button" class="search_btn" value="极客" onclick="search_click('geek')" />
                    			</div>
                    		</div>
                     </div>
