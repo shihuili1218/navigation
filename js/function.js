@@ -112,7 +112,7 @@ function search_click(engine){
             } else if (engine === 'geek') {
             	search('https://s.geekbang.org/search/c=0/k=' + v + '/t=')
             } else if (engine === 'google-image') {
-            	search('https://dxo.xilesou.287865.com/search?q=' + v )
+            	search('https://www.googlebridge.com/search?q=' + v )
             }
         }
     }
